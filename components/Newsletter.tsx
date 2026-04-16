@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Script from "next/script";
 
 const pillars = [
@@ -26,12 +27,22 @@ const pillars = [
 
 export default function Newsletter() {
   return (
-    <section id="newsletter" className="bg-cream py-24 px-6">
+    <section id="newsletter" className="relative overflow-hidden bg-cream py-24 px-6">
+      <Image
+        src="/flower1/Pages%20from%20Knipholia%20Botancia%20in%20Originali-6.png"
+        alt=""
+        width={1000}
+        height={2300}
+        className="absolute left-[70%] -translate-x-1/2 -top-[20%] pointer-events-none select-none z-0 w-[400px] md:w-[1000px]"
+        style={{ height: "auto" }}
+        style={{ opacity: 0.07, mixBlendMode: "multiply" }}
+        aria-hidden="true"
+      />
       <Script
         src="https://subscribe-forms.beehiiv.com/embed.js"
         strategy="lazyOnload"
       />
-      <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Centered heading */}
         <div className="text-center mb-14">
           <p className="font-sans text-xs font-medium text-charcoal/50 tracking-widest uppercase mb-4">
@@ -73,24 +84,25 @@ export default function Newsletter() {
           ))}
         </div>
 
-        {/* Beehiiv embed */}
-        <div className="flex justify-center">
-          <iframe
-            src="https://subscribe-forms.beehiiv.com/9b70d12a-e1c9-49ac-a98c-51edd664746d"
-            className="beehiiv-embed"
-            data-test-id="beehiiv-embed"
-            style={{
-              width: "554px",
-              height: "201px",
-              margin: 0,
-              borderRadius: 0,
-              backgroundColor: "transparent",
-              boxShadow: "none",
-              maxWidth: "100%",
-              border: "none",
-            }}
-          />
-        </div>
+      </div>
+
+      {/* Beehiiv embed — full bleed on mobile */}
+      <div className="relative z-10 w-full px-4 md:px-6 mt-14 flex justify-center">
+        <iframe
+          src="https://subscribe-forms.beehiiv.com/9b70d12a-e1c9-49ac-a98c-51edd664746d"
+          className="beehiiv-embed"
+          data-test-id="beehiiv-embed"
+          style={{
+            width: "100%",
+            maxWidth: "554px",
+            height: "201px",
+            margin: 0,
+            borderRadius: 0,
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            border: "none",
+          }}
+        />
       </div>
     </section>
   );
