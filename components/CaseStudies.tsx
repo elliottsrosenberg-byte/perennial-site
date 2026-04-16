@@ -43,7 +43,7 @@ const studies: Study[] = [
       { src: "/LaurenNotion2.png", caption: "Project tracking system" },
     ],
     quote:
-      "Elliot has been working with my studio for the past five months or so helping us with everything from business development to marketing to web design. He has a really admirable workflow and is great at keeping the ball rolling with ongoing projects. He took considerable time to learn about our company and develop a custom branding strategy. He redesigned our website and streamlined our marketing material across all platforms and he's a pleasure to work with.",
+      "Elliott has been working with my studio for the past five months or so helping us with everything from business development to marketing to web design. He has a really admirable workflow and is great at keeping the ball rolling with ongoing projects. He took considerable time to learn about our company and develop a custom branding strategy. He redesigned our website and streamlined our marketing material across all platforms and he's a pleasure to work with.",
     quoteAuthor: "Lauren Goodman, Studio Lauren Goodman",
   },
   {
@@ -97,7 +97,7 @@ export default function CaseStudies() {
         <div className="max-w-3xl mx-auto flex flex-col divide-y divide-charcoal/10">
           {studies.map((study) => {
             const isOpen = open === study.name;
-            const cols = study.images.length === 4 ? "grid-cols-2" : "grid-cols-3";
+            const cols = study.images.length === 4 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3";
             const domain = study.website.replace("https://", "");
 
             return (
@@ -160,7 +160,7 @@ export default function CaseStudies() {
                             alt=""
                             fill
                             className={`object-cover ${img.position ?? "object-center"}`}
-                            sizes="(max-width: 768px) 50vw, 33vw"
+                            sizes="(max-width: 768px) 100vw, 33vw"
                           />
                         </div>
                       ))}
@@ -172,7 +172,7 @@ export default function CaseStudies() {
                         <p className="font-sans text-xs font-medium text-charcoal/40 tracking-widest uppercase">
                           Operations + Systems
                         </p>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {study.operationalImages.map((img, i) => (
                             <div key={i} className="flex flex-col gap-1.5">
                               <div className="relative aspect-[3/2] rounded-xl overflow-hidden bg-cream">
@@ -181,7 +181,7 @@ export default function CaseStudies() {
                                   alt={img.caption}
                                   fill
                                   className="object-cover object-top"
-                                  sizes="(max-width: 768px) 50vw, 33vw"
+                                  sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                               </div>
                               <p className="font-sans text-xs text-charcoal/40">
