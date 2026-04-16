@@ -103,7 +103,10 @@ export default function CaseStudies() {
             return (
               <div key={study.name}>
                 {/* Header row — always visible */}
-                <div className="py-7 flex items-start justify-between gap-8">
+                <div
+                  className="py-7 flex items-start justify-between gap-8 cursor-pointer"
+                  onClick={() => setOpen(isOpen ? null : study.name)}
+                >
                   <div className="flex flex-col gap-1">
                     <p className="font-display font-medium text-charcoal text-2xl md:text-3xl tracking-tight">
                       {study.name}
@@ -115,13 +118,13 @@ export default function CaseStudies() {
                       href={study.website}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="font-sans text-xs text-charcoal/35 hover:text-charcoal/60 transition-colors mt-0.5"
                     >
                       {domain} →
                     </a>
                   </div>
                   <button
-                    onClick={() => setOpen(isOpen ? null : study.name)}
                     className="shrink-0 text-charcoal/30 text-2xl font-light leading-none mt-1 hover:text-charcoal/60 transition-colors"
                     aria-label={isOpen ? "Collapse" : "Expand"}
                     style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.2s" }}

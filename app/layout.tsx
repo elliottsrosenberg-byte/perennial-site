@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Perennial supports furniture, lighting, and collectible designers build the business infrastructure that turns great work into a real livelihood.",
   icons: {
-    icon: "/FaviconSage.png",
+    icon: [{ url: "/FaviconSage.png", type: "image/png" }],
     apple: "/FaviconSage.png",
   },
 };
