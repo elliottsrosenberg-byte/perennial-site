@@ -34,8 +34,7 @@ export default function Newsletter() {
         width={1000}
         height={2300}
         className="absolute left-[70%] -translate-x-1/2 -top-[20%] pointer-events-none select-none z-0 w-[400px] md:w-[1000px]"
-        style={{ height: "auto" }}
-        style={{ opacity: 0.07, mixBlendMode: "multiply" }}
+        style={{ height: "auto", opacity: 0.07, mixBlendMode: "multiply" }}
         aria-hidden="true"
       />
       <Script
