@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Albert_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -36,6 +37,18 @@ export default function RootLayout({
       className={`${newsreader.variable} ${albertSans.variable} antialiased`}
     >
       <body className="min-h-screen font-sans">{children}</body>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GT-MJWBGMVS"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GT-MJWBGMVS');
+        `}
+      </Script>
     </html>
   );
 }
