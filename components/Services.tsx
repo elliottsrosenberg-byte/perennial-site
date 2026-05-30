@@ -40,6 +40,16 @@ const services = [
   },
 ];
 
+const designWork = [
+  "CAD Modeling",
+  "Graphic Design",
+  "Web Design and Development",
+  "Video Editing",
+  "Furniture Design",
+  "Manufacturing Support",
+  "Product Management",
+];
+
 export default function Services() {
   return (
     <section id="services" className="bg-cream py-24 px-6">
@@ -49,9 +59,13 @@ export default function Services() {
             Services
           </p>
           <h2 className="font-display font-medium text-charcoal text-4xl md:text-5xl tracking-tight">
-            <span className="block">Solving for the business</span>
-            <span className="block">side of your studio.</span>
+            <span className="block">Strategic Advisory and</span>
+            <span className="block">Hands-On Implementation</span>
           </h2>
+          <p className="font-sans text-charcoal/60 text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto">
+            Employing a two-pronged approach that pairs critical thinking with
+            problem-solving.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -79,6 +93,29 @@ export default function Services() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="bg-off-white rounded-xl p-8 flex flex-col gap-5 mb-16">
+          <h3 className="font-display font-medium text-charcoal text-2xl tracking-tight">
+            Design Work
+          </h3>
+          <p className="font-sans text-charcoal/60 text-sm leading-relaxed">
+            Beyond strategy, Perennial offers hands-on creative and technical
+            execution across a wide range of disciplines. It&apos;s a broad
+            gambit — portfolios or project examples are available for any of
+            these upon request.
+          </p>
+          <ul className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 pt-2 border-t border-charcoal/8">
+            {designWork.map((item) => (
+              <li
+                key={item}
+                className="font-sans text-xs text-charcoal/70 flex items-center gap-2"
+              >
+                <span className="w-1 h-1 rounded-full bg-sage/60 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="flex justify-center">
