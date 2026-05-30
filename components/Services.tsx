@@ -70,31 +70,54 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="bg-off-white rounded-xl p-8 flex flex-col gap-5"
-            >
-              <h3 className="font-display font-medium text-charcoal text-2xl tracking-tight">
-                {service.title}
-              </h3>
-              <p className="font-sans text-charcoal/60 text-sm leading-relaxed">
-                {service.description}
-              </p>
-              <ul className="mt-auto flex flex-col gap-2 pt-2 border-t border-charcoal/8">
-                {service.items.map((item) => (
-                  <li
-                    key={item}
-                    className="font-sans text-xs text-charcoal/70 flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-sage/60 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {services.map((service, i) => {
+            const featured = i === 0;
+            return (
+              <div
+                key={service.title}
+                className={`rounded-xl p-8 flex flex-col gap-5 ${
+                  featured ? "bg-lime" : "bg-off-white"
+                }`}
+              >
+                <h3
+                  className={`font-display font-medium text-2xl tracking-tight ${
+                    featured ? "text-charcoal" : "text-charcoal"
+                  }`}
+                >
+                  {service.title}
+                </h3>
+                <p
+                  className={`font-sans text-sm leading-relaxed ${
+                    featured ? "text-charcoal/80" : "text-charcoal/60"
+                  }`}
+                >
+                  {service.description}
+                </p>
+                <ul
+                  className={`mt-auto flex flex-col gap-2 pt-2 border-t ${
+                    featured ? "border-charcoal/15" : "border-charcoal/8"
+                  }`}
+                >
+                  {service.items.map((item) => (
+                    <li
+                      key={item}
+                      className={`font-sans text-xs flex items-center gap-2 ${
+                        featured ? "text-charcoal/85" : "text-charcoal/70"
+                      }`}
+                    >
+                      <span
+                        className={`w-1 h-1 rounded-full shrink-0 ${
+                          featured ? "bg-charcoal/40" : "bg-sage/60"
+                        }`}
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         <div className="bg-off-white rounded-xl p-8 flex flex-col gap-5 mb-16 text-center">
@@ -106,7 +129,7 @@ export default function Services() {
             execution across a wide range of disciplines. Portfolios or project
             examples are available for any of these upon request.
           </p>
-          <ul className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-2 border-t border-charcoal/8">
+          <ul className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 pt-2 border-t border-charcoal/8">
             {designWork.map((item) => (
               <li
                 key={item}
