@@ -21,16 +21,16 @@ export default function Nav() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           <a
-            href="#services"
-            className="font-sans text-sm font-normal text-charcoal/70 hover:text-charcoal transition-colors"
-          >
-            Services
-          </a>
-          <a
             href="#work"
             className="font-sans text-sm font-normal text-charcoal/70 hover:text-charcoal transition-colors"
           >
             Work
+          </a>
+          <a
+            href="#services"
+            className="font-sans text-sm font-normal text-charcoal/70 hover:text-charcoal transition-colors"
+          >
+            Services
           </a>
           <a
             href="#about"

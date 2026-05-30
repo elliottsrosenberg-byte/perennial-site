@@ -94,19 +94,16 @@ export default function CaseStudies() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto flex flex-col divide-y divide-charcoal/10">
+        <div className="max-w-5xl mx-auto flex flex-col gap-16">
           {studies.map((study) => {
             const isOpen = open === study.name;
-            const cols = study.images.length === 4 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3";
+            const cols = study.images.length === 4 ? "grid-cols-2 md:grid-cols-4" : "grid-cols-1 sm:grid-cols-3";
             const domain = study.website.replace("https://", "");
 
             return (
-              <div key={study.name}>
-                {/* Header row — always visible */}
-                <div
-                  className="py-7 flex items-start justify-between gap-8 cursor-pointer"
-                  onClick={() => setOpen(isOpen ? null : study.name)}
-                >
+              <div key={study.name} className="flex flex-col gap-6">
+                {/* Header row */}
+                <div className="flex items-start justify-between gap-8">
                   <div className="flex flex-col gap-1">
                     <p className="font-display font-medium text-charcoal text-2xl md:text-3xl tracking-tight">
                       {study.name}
@@ -118,24 +115,49 @@ export default function CaseStudies() {
                       href={study.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
                       className="font-sans text-xs text-charcoal/35 hover:text-charcoal/60 transition-colors mt-0.5"
                     >
                       {domain} →
                     </a>
                   </div>
-                  <button
-                    className="shrink-0 text-charcoal/30 text-2xl font-light leading-none mt-1 hover:text-charcoal/60 transition-colors"
-                    aria-label={isOpen ? "Collapse" : "Expand"}
+                </div>
+
+                {/* Main image grid — always visible */}
+                <div className={`grid ${cols} gap-3`}>
+                  {study.images.map((img, i) => (
+                    <div
+                      key={i}
+                      className="relative aspect-[4/3] rounded-xl overflow-hidden bg-cream"
+                    >
+                      <Image
+                        src={img.src}
+                        alt=""
+                        fill
+                        className={`object-cover ${img.position ?? "object-center"}`}
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Detail toggle */}
+                <button
+                  onClick={() => setOpen(isOpen ? null : study.name)}
+                  className="self-start font-sans text-xs font-medium text-charcoal/45 hover:text-charcoal/80 transition-colors flex items-center gap-1.5"
+                  aria-expanded={isOpen}
+                >
+                  <span
+                    className="text-base font-light leading-none"
                     style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.2s" }}
                   >
                     +
-                  </button>
-                </div>
+                  </span>
+                  {isOpen ? "Hide details" : "Services, systems & testimonial"}
+                </button>
 
                 {/* Expanded content */}
                 {isOpen && (
-                  <div className="pb-10 flex flex-col gap-8">
+                  <div className="flex flex-col gap-8 pb-2">
                     {/* Service pills — neutral */}
                     <div className="flex flex-wrap gap-2">
                       {study.services.map((service) => (
@@ -145,24 +167,6 @@ export default function CaseStudies() {
                         >
                           {service.label}
                         </span>
-                      ))}
-                    </div>
-
-                    {/* Main image grid */}
-                    <div className={`grid ${cols} gap-3`}>
-                      {study.images.map((img, i) => (
-                        <div
-                          key={i}
-                          className="relative aspect-[4/3] rounded-xl overflow-hidden bg-cream"
-                        >
-                          <Image
-                            src={img.src}
-                            alt=""
-                            fill
-                            className={`object-cover ${img.position ?? "object-center"}`}
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                          />
-                        </div>
                       ))}
                     </div>
 
