@@ -48,6 +48,8 @@ const designWork = [
   "Furniture Design",
   "Manufacturing Support",
   "Product Management",
+  "Lighting Design",
+  "Asset Creation",
 ];
 
 export default function Services() {
@@ -62,9 +64,9 @@ export default function Services() {
             <span className="block">Strategic Advisory and</span>
             <span className="block">Hands-On Implementation</span>
           </h2>
-          <p className="font-sans text-charcoal/60 text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto">
+          <p className="font-sans text-charcoal/60 text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto md:max-w-none md:whitespace-nowrap">
             Employing a two-pronged approach that pairs critical thinking with
-            problem-solving.
+            creative problem-solving.
           </p>
         </div>
 
@@ -95,17 +97,16 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="bg-off-white rounded-xl p-8 flex flex-col gap-5 mb-16">
+        <div className="bg-off-white rounded-xl p-8 flex flex-col gap-5 mb-16 text-center">
           <h3 className="font-display font-medium text-charcoal text-2xl tracking-tight">
             Design Work
           </h3>
           <p className="font-sans text-charcoal/60 text-sm leading-relaxed">
             Beyond strategy, Perennial offers hands-on creative and technical
-            execution across a wide range of disciplines. It&apos;s a broad
-            gambit — portfolios or project examples are available for any of
-            these upon request.
+            execution across a wide range of disciplines. Portfolios or project
+            examples are available for any of these upon request.
           </p>
-          <ul className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 pt-2 border-t border-charcoal/8">
+          <ul className="mt-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-2 border-t border-charcoal/8">
             {designWork.map((item) => (
               <li
                 key={item}
