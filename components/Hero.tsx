@@ -29,7 +29,7 @@ export default function Hero() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm font-medium bg-warm-white text-charcoal px-6 py-3 rounded-lg hover:bg-warm-white/90 transition-colors"
+            className="font-sans text-sm font-medium bg-lime text-warm-white px-6 py-3 rounded-lg hover:bg-lime/90 transition-colors"
           >
             Get In Touch
           </a>
