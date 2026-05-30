@@ -12,11 +12,11 @@ export default function Hero() {
         width={1500}
         height={2600}
         className="absolute left-[30%] -translate-x-1/2 -top-[20%] pointer-events-none select-none z-0 w-[600px] md:w-[1500px]"
-        style={{ height: "auto", opacity: 0.07, mixBlendMode: "multiply" }}
+        style={{ height: "auto", opacity: 0.18, mixBlendMode: "screen" }}
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="font-display font-bold text-warm-white text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-8">
+        <h1 className="font-display font-medium text-warm-white text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-8">
           Helping design studios build a sustainable practice.
         </h1>
         <p className="font-sans text-warm-white/90 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
