@@ -62,6 +62,23 @@ const studies: Study[] = [
     ],
   },
   {
+    name: "Sedum Lamp",
+    tagline: "Design, production, marketing, and sales for an ambient table lamp",
+    website: "https://www.elliottsrosenberg.com/work/sedum-lamp.html",
+    services: [
+      { label: "Product Design" },
+      { label: "Production" },
+      { label: "Marketing" },
+      { label: "Sales" },
+    ],
+    images: [
+      { src: "/sedum-1.jpg", position: "object-center" },
+      { src: "/sedum-2.png", position: "object-center" },
+      { src: "/sedum-3.png", position: "object-center" },
+      { src: "/sedum-4.png", position: "object-center" },
+    ],
+  },
+  {
     name: "Siegel",
     tagline: "Brand, web, marketing, and business development for an architecture studio",
     website: "https://siegel.design",
