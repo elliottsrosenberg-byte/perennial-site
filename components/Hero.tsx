@@ -5,7 +5,7 @@ const CAL_URL =
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-warm-white pt-28 pb-36 px-6 text-center">
+    <section className="relative overflow-hidden bg-lime pt-28 pb-36 px-6 text-center">
       <Image
         src="/flower1/Pages%20from%20Knipholia%20Botancia%20in%20Originali-4.png"
         alt=""
@@ -19,7 +19,7 @@ export default function Hero() {
         <h1 className="font-display font-bold text-charcoal text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-8">
           Helping design studios build a sustainable practice.
         </h1>
-        <p className="font-sans text-charcoal/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+        <p className="font-sans text-charcoal/80 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
           Perennial supports furniture, lighting, and collectible designers build
           the business infrastructure that turns great work into a real
           livelihood.
@@ -29,13 +29,13 @@ export default function Hero() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm font-medium bg-lime text-warm-white px-6 py-3 rounded-lg hover:bg-lime/90 transition-colors"
+            className="font-sans text-sm font-medium bg-charcoal text-warm-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors"
           >
             Get In Touch
           </a>
           <a
             href="#services"
-            className="font-sans text-sm font-medium border border-charcoal/20 text-charcoal px-6 py-3 rounded-lg hover:border-charcoal/40 transition-colors"
+            className="font-sans text-sm font-medium border border-charcoal/30 text-charcoal px-6 py-3 rounded-lg hover:border-charcoal/50 transition-colors"
           >
             Learn More
           </a>
