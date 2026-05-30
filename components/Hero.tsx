@@ -16,10 +16,10 @@ export default function Hero() {
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="font-display font-bold text-charcoal text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-8">
+        <h1 className="font-display font-bold text-warm-white text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-8">
           Helping design studios build a sustainable practice.
         </h1>
-        <p className="font-sans text-charcoal/80 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+        <p className="font-sans text-warm-white/90 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
           Perennial supports furniture, lighting, and collectible designers build
           the business infrastructure that turns great work into a real
           livelihood.
@@ -29,13 +29,13 @@ export default function Hero() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-sm font-medium bg-charcoal text-warm-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors"
+            className="font-sans text-sm font-medium bg-warm-white text-charcoal px-6 py-3 rounded-lg hover:bg-warm-white/90 transition-colors"
           >
             Get In Touch
           </a>
           <a
             href="#services"
-            className="font-sans text-sm font-medium border border-charcoal/30 text-charcoal px-6 py-3 rounded-lg hover:border-charcoal/50 transition-colors"
+            className="font-sans text-sm font-medium border border-warm-white/70 text-warm-white px-6 py-3 rounded-lg hover:border-warm-white transition-colors"
           >
             Learn More
           </a>
