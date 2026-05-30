@@ -5,7 +5,7 @@ const CAL_URL =
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-lime pt-28 pb-36 px-6 text-center">
+    <section className="relative overflow-hidden bg-charcoal pt-28 pb-36 px-6 text-center">
       <Image
         src="/flower1/Pages%20from%20Knipholia%20Botancia%20in%20Originali-4.png"
         alt=""
